@@ -1,0 +1,29 @@
+{
+  "name": "website-idea-generator",
+  "version": "1.0.0",
+  "description": "A full-stack web application for generating website ideas",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:dev:frontend\" \"npm:dev:backend\"",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "dev:backend": "npm run start:dev --workspace=backend",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "test:backend": "cd backend && npm run test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "fullstack",
+    "nextjs",
+    "nestjs",
+    "mongodb",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC"
+}
